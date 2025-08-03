@@ -1,10 +1,8 @@
 import Link from 'next/link'
-// import { headers } from 'next/headers'
+
 
 export default async function NotFound() {
-  //   const headersList = await headers()
-  //   const domain = headersList.get('host')
-  //   const data = await getSiteData(domain)
+
   return (
     <div
       className={`w-full h-screen flex justify-center items-center bg-stone-200`}
