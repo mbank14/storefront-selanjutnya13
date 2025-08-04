@@ -1,8 +1,7 @@
 import { IEggProduct } from "@/shared/types";
-import { NextApiRequest, NextApiResponse } from "next";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method == "GET") {
+export async function GET(req: Request, ) {
+  try{
     const eggProduct: IEggProduct[] = [
       {
         id: "egg-001",
@@ -57,8 +56,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       },
     ];
 
-    res.status(200).json(eggProduct);
-  } else {
-    res.status(500).json({ message: "Invalid" });
+    return new Response(JSON.stringify({ message: 'GET request successful', data: eggProduct }), {
+      status: 200,
+    });
+  }catch{
+    return new Response(JSON.stringify({ error: 'Failed to handle GET request' }), {
+      status: 500,
+    });
   }
 }
