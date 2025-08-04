@@ -33,14 +33,14 @@ export interface IEggProduct extends IBaseProduct {
 
 // Mount Product
 export interface IMountProduct extends IBaseProduct {
-    catrgory: "mount";
+    category: "mount";
     mountType: "krucukrider" | "drupilot";
-    ridebale: boolean;
+    rideable: boolean;
     speed: number;
     age: number;
 }
 
-export interface AccessoryProduct extends IBaseProduct {
+export interface IAccessoryProduct extends IBaseProduct {
   category: "accessory";
   compatibleWith: Species[];
   effect: string;
