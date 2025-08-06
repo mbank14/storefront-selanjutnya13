@@ -1,5 +1,5 @@
 import { IAccessoryProduct } from "@/shared/types";
-import { NextApiRequest, NextApiResponse } from "next";
+// import { NextApiRequest, NextApiResponse } from "next";
 
 export async function GET() {
   try{

@@ -1,7 +1,7 @@
 import { IMountProduct } from "@/shared/types";
-import { NextApiRequest, NextApiResponse } from "next";
+// import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     const mountProduct: IMountProduct[] = [
       {
